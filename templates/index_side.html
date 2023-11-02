@@ -1,0 +1,17 @@
+<div id='panel' class="panel panel-default" >
+	<div id ="panel-heading" class="panel-heading"></div>
+	<div id = "panel-body" class="panel-body">
+		{if $isuser}
+			<div class='alert alert-success text-center' id="welcome_user_info">Welcome! {$user_id}<br></div>
+			<a href="user.php?op=logout" class="btn btn-block btn-danger">登出</a>
+		{/if}
+		{if !$isuser}
+			<div class='alert alert-warning'>登入以使用更多功能</div>
+			<a href="user.php?op=login" class="btn btn-block btn-info">登入</a>
+		{/if}
+		<!-- {if $isadmin}
+		<a href="tool.php?op=list" class="btn btn-block btn-success">內容</a>
+		{/if} -->
+		
+	</div>
+</div>
